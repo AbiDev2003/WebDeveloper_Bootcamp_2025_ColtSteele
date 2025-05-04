@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inheritance Example</title>
+    <style>
+        /* Parent element style */
+        .parent {
+            color: blue; /* This color will be inherited by child elements */
+            font-family: Arial, sans-serif; /* This font-family will be inherited by child elements */
+        }
+
+        /* Child element style */
+        .child {
+            font-size: 20px; /* This font-size will not be inherited by the parent */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>This paragraph is inside a parent div with class "parent". It will inherit the color and font-family from the parent.</p>
+        <div class="child">
+            <p>This paragraph is inside a child div with class "child". It will inherit the color and font-family from the parent, but has its own font-size.</p>
+        </div>
+    </div>
+</body>
+</html>

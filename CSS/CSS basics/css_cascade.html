@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Cascade Example</title>
+        <style>
+          /* External CSS */
+          p {
+            color: blue;
+          }
+
+          /* Internal CSS */
+          #special {
+            color: green;
+          }
+
+          /* Inline CSS */
+        </style>
+      </head>
+      <body>
+        <p>This paragraph will be blue because of the external CSS.</p>
+        <p id="special" style="color: red">
+          This paragraph will be red because inline CSS has the highest
+          priority.
+        </p>
+        <p id="special">
+          This paragraph will be green because internal CSS overrides external
+          CSS.
+        </p>
+        <!-- 
+            The first paragraph is styled blue by the external CSS rule p { color: blue; }.
+            The second paragraph has an inline style style="color: red;", which overrides both external and internal CSS, making it red.
+            The third paragraph has an internal CSS rule #special { color: green; }, which overrides the external CSS, making it green.
+        -->
+      </body>
+    </html>
+  </body>
+</html>

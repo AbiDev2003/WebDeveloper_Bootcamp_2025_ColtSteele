@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity Example</title>
+    <style>
+        /* Type selector (specificity: 0,0,0,1) */
+        p {
+            color: blue;
+        }
+
+        /* Class selector (specificity: 0,0,1,0) */
+        .special {
+            color: green;
+        }
+
+        /* ID selector (specificity: 0,1,0,0) */
+        #unique {
+            color: red;
+        }
+
+        /* Inline style (specificity: 1,0,0,0) */
+    </style>
+</head>
+<body>
+    <p>This paragraph will be blue because of the type selector.</p>
+    <p class="special">This paragraph will be green because of the class selector.</p>
+    <p id="unique">This paragraph will be red because of the ID selector.</p>
+    <p id="unique" class="special" style="color: purple;">This paragraph will be purple because inline styles have the highest specificity.</p>
+    <!-- inline css > id > class > element selectors -->
+</body>
+</html>

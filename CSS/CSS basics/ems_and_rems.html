@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- all about ems -->
+    <h1>Css units <buttons>Click me</buttons></h1>
+
+    <article id="ems">
+        <h2>I am h2</h2>
+        <h3>I am h3</h3>
+        <button>Click me</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus cum nobis hic sequi quasi ipsam illum quia tenetur libero illo eaque, sint eligendi, delectus incidunt nam reprehenderit explicabo. Sapiente hic veritatis quaerat animi vel cupiditate corrupti aut laboriosam qui corporis velit dignissimos facilis porro quo, exercitationem inventore. Eum, libero deserunt.</p>
+        <ul>
+            <li>Pasta
+                <ul>
+                    <li>
+                        Ravioli
+                        <ul>
+                            <li>Spinach Ricotta</li>
+                        </ul>
+                    </li>
+                    <li>Penne</li>
+                </ul>
+            </li>
+            
+            <li>Salad</li>
+            <li>Gelato</li>
+        </ul>
+        
+    </article>
+    
+    <button>Click me</button>
+    <section>
+        <div></div>
+    </section>
+    
+    <h1>Using rems instead of ems !</h1>
+    
+    <!-- all about rems -->
+    <article id="rems">
+        <h2>I am h2</h2>
+        <h3>I am h3</h3>
+        <button>Click me</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita ducimus officia alias, quas nulla pariatur eveniet ratione cum quis! Porro expedita officiis est cum, ab aspernatur necessitatibus sit iure consequuntur quaerat, aliquid esse! Fugiat quis id laboriosam, accusamus sit ratione inventore reiciendis ipsum reprehenderit, quisquam ad eum, pariatur alias.</p>
+        <ul>
+            <li>Pasta
+                <ul>
+                    <li>
+                        Ravioli
+                        <ul>
+                            <li>Spinach Ricotta</li>
+                        </ul>
+                    </li>
+                    <li>Penne</li>
+                </ul>
+            </li>
+            
+            <li>Salad</li>
+            <li>Gelato</li>
+     </article>
+</body>
+<style>
+    body{
+        background-color: rgb(184, 182, 182);
+
+    }
+    article{
+        font-size: 15px; 
+    }
+    button{
+        font-size: 1em;
+        padding: 0 1em;
+        border-radius: 0.5em;
+        background-color: #2a9d8f;
+        color: white;
+    }
+
+    #ems{
+        font-size: 15px;
+    }
+
+
+    #ems ul{
+        font-size: 1.5em; /*ems derive the font size from the parent element i.e if parent ul have 10px , and we set child ul to be 1.5em then child size will be 10 X 1.5 i.e 15px*/
+    }
+
+
+    #rems h2{
+        font-size: 3rem;
+    }
+    #rems h3{
+        font-size: 2rem;
+    }
+    #rems ul{
+        font-size: 0.8rem;
+    }
+
+    #rems button{
+        font-size: 1rem; /*rem derive the font size from the root element i.e if root html have 10px , and we set child ul to be 1.5rem then child size will be 10 X 1.5 i.e 15px*/
+    }
+</style>
+</html>

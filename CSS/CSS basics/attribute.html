@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors Example</title>
+    <style>
+        /* Attribute selector for input elements with type="password" */
+        input[type="password"] {
+            border: 2px solid red;
+        }
+
+        /* Attribute selector for anchor elements with href ending in ".com" */
+        a[href$=".com"] {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="password1">Password 1:</label>
+        <input type="password" id="password1" name="password1"><br><br>
+
+        <label for="password2">Password 2:</label>
+        <input type="password" id="password2" name="password2"><br><br>
+    </form>
+
+    <a href="https://example.com">Example.com</a><br>
+    <a href="https://example.org">Example.org</a>
+</body>
+</html>
+
+

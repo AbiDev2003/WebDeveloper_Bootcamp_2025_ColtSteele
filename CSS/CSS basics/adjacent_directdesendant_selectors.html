@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .container > p {
+            color: blue;
+        } /* direct descendant selector means, targets only the p elements that are direct children of the element with the class container */
+        h1 + p {
+            color: red;
+        } /* adjacent sibling selector means, targets only the p elements that are immediately preceded by an h1 element */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>This paragraph is a direct descendant of the container div and will be blue.</p>
+        <div>
+            <p>This paragraph is not a direct descendant of the container div and will not be blue.</p>
+        </div>
+    </div>
+    <h1>Heading</h1>
+    <p>This paragraph is an adjacent sibling of the h1 and will be red.</p>
+    <p>This paragraph is not an adjacent sibling of the h1 and will not be red.</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements Example</title>
+    <style>
+        /* Pseudo-element for adding content before an element */
+         p::before {
+            content: "Note: ";
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Pseudo-element for adding content after an element */
+        p::after {
+            content: " [End of paragraph]";
+            font-style: italic;
+            color: blue; 
+        } 
+        p::first-line {
+            color: green;
+            font-size: 20px;
+        }
+        p::first-letter {
+            color: purple;
+            font-size: 30px;
+        }
+        p::selection {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph demonstrating pseudo-elements. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, odit?</p>
+</body>
+</html>

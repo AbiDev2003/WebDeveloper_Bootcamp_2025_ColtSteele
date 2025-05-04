@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">Login</button>
+</body>
+<style>
+    body{
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* full height of the viewport */
+        background-color: rgb(81, 80, 80);
+    }
+    button{
+        background: none; /* none means no background color */
+        color: #ffa260;
+        border: 2px solid;
+        padding: 1em 2em; /* padding: 1em 2em means 1em top and bottom and 2em left and right */
+        font-size: 1em;  
+    }
+    button:hover{
+        border-color: yellow;
+        color: white;
+        box-shadow: 0 0.5em 0.5em -0.5em yellow;
+        transform: translateY(-0.25em);
+        transition: all 0.2s ease-in-out; /* all means all properties will be transitioned, 0.2s means 0.2 seconds, ease-in-out means the transition will be smooth */
+        cursor: pointer; /* cursor: pointer means the cursor will change to a pointer when hovering over the button */
+    }
+
+</style>
+</html>

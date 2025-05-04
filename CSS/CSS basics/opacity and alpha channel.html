@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div id="rgba">
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nostrum.
+        </div>
+    </section>
+    <section>
+        <div id="opacity">
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nostrum.
+            <button>click</button>
+        </div>
+    </section>
+</body>
+
+<style>
+    section{
+        width: 500px;
+        height: 500px;
+        /* background-color: magenta; */
+        background-color: #00cca0b9;
+    }
+    #rgba{
+        width: 50%;
+        height: 50%;
+        background-color: rgba(255,255,255,0.7); /*inside elements like button will not be impacted*/ /*a means alpha channel*/
+
+    }
+    #opacity{
+        width: 50%;
+        height: 50%;
+        background-color: yellow;
+        opacity: 0.5; /*inside elements like button will be impacted i.e opacity of button will also be impacted. */
+    }
+</style>
+</html>

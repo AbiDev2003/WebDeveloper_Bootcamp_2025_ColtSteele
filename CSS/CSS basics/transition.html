@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Transition</h1>
+    <div class="circle"></div>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+<style>
+    .circle{
+        width: 300px;
+        height: 300px;
+        background-color: magenta;
+        /* transition: 1s; */
+        transition: background-color 1s 1s, border-radius 1s 1s; /* exact property is specified like which property you want to change e.g: backgoundcolor or border-radius */
+        
+    }
+    .circle:hover{
+        background-color: cyan;
+        border-radius: 50%;
+    }
+
+    section div{
+        height: 100px;
+        width: 100px;
+        background-color: turquoise;
+        margin: 20px 0;
+        transition: margin-left 3s; 
+
+    }
+    section:hover div{
+        margin-left: 500px;
+    }
+
+    div:nth-of-type(1){
+        transition-timing-function: ease-in;
+    }
+    div:nth-of-type(2){
+        transition-timing-function: ease-out;
+    }
+    div:nth-of-type(3){
+        transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+    }
+    div:nth-of-type(4){
+        transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    }
+
+</style>
+</html>
