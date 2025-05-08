@@ -1,0 +1,94 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex; /*flex property activated*/
+    /* flex-direction: column; column wise arranged */
+    /* flex-direction: column-reverse; column rotated or reversed, similarly we can do for row as well.  */
+
+
+    /* justify-content: flex-start; default value */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; space between the elements */
+    /* justify-content: space-around; space around the elements */
+    /* flex-direction: column;  */
+    /* justify-content: space-evenly; space evenly btween eleemnts, row wise or column wise (which you have to mention) */
+    /* justify-content: flex-start; */
+    /*flex: wrap; /*so this is the wrapping or sqishing, just depends upon the flex direction, cross axis. */
+    /* flex-wrap: wrap; default is nowrap, and another one is there wrap reverse */
+
+
+    /* we can do the stuff below using both flex directions row and cloumn.  */
+    /* flex-direction: row; */
+    flex-direction: row;
+    justify-content: center; /*center horizontally*/
+    /* align-items: flex-start; default value */
+    /* align-items: flex-start;  */
+    /* align-items: center; */
+    flex-wrap: wrap;
+    /* align-items: baseline; even if the test font size are diferent, the base line will be same i.e ona single line */
+    /* align-content: space-between; */
+
+
+
+
+}
+
+#container div{
+    height: 200px;
+    width: 200px;
+    max-width: 300px;
+    text-align: center;
+    /* font-size: 4em; */
+    flex-basis: 200px; /* this is the default size of the element, and it will be used to calculate the flex-grow and flex-shrink */
+    /*flex-grow: 1; /* it wont grow more than flex-basis or if flex basis is not there, then it will grow to the max width */
+    /*flex-shrink: 1; /* it will shrink to the flex-basis, if there is no space left */
+}
+
+/* div:nth-of-type(1){
+    flex-grow: 1;
+    flex-shrink: 1;
+}*/
+div:nth-of-type(5){
+    /* flex-grow: 2;  */
+    flex-shrink: 2;
+}
+
+/* div:nth-of-type(2){
+    align-self: center;
+}
+
+div:nth-of-type(3){
+    align-self: flex-end;
+} */
+
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+main .sidebar{
+    background-color: #6930c3;
+    border: 2px solid white;
+    /* flex: 1 300px; */
+    flex: 1 2 300px;
+    /* flex is like a short hand for flex-grow, flex-shrink and flex-basis */
+}
+main .maincontent{
+    background-color: #80ffdb;
+    /* flex: 1 600px; */
+    flex: 2 1 800px;
+}
+
