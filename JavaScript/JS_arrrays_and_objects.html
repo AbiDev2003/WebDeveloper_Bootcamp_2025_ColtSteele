@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array</title>
+</head>
+<body>
+    <h1>Studying array, open console to experiment(Try on the console). HAHA</h1>
+</body>
+<script>
+    // ***************************************************************Array**************************************************************
+    // // array dclaration - array is just a collection of more than 1 values (can be any kind like strings, integere all together. )
+    // // let colors = []; //empty array
+    // let colors = ['yellow', 'red', 'blue']; //empty array
+    // // let lottoNum = [12, 13, 14, 15];
+    // // let mixy = [12, "i love you", true, null];
+    // // console.log(mixy); //inside written than prototype array (we will discuss in depth later)
+    // // console.log(colors);
+    // // console.log(typeof(colors)); //object
+
+
+
+
+    // // array random access
+    // // you can access any index value, change value, change type
+    // console.log(colors[0]);
+    // // colors[0] = 'purple'; //u can do this in the console as well
+    // // console.log(colors);
+    // colors[10] = 'indigo'; //index number 3 to 9 will be empty
+    // console.log(colors);
+    // console.log(colors.length);
+
+    
+
+
+    // bulit in array methods (push, pop, shift, unshift, concat, indexOf, includes, reverse, slice, splice, toString etc..)
+    // let movieline = ['tom', 'nancy']
+    // console.log(movieline);
+    // movieline.push('oliver'); //single thing push
+    // console.log(movieline);
+    // movieline.push('abinash', 'harry'); //multiple thing push
+    // console.log(movieline);
+    
+    // movieline.pop(); //delete from the last of the array
+    // console.log(movieline);
+    
+    // movieline.shift(); //delete from the first of the array
+    // console.log(movieline);
+    
+    // movieline.unshift('VIP person'); //add in the first of the array
+    // console.log(movieline);
+
+    // let cats = ['santa', 'chris']
+    // let dogs = ['pablo', 'prince']
+    // let myPets = cats.concat(dogs) //string concatenation
+    // console.log(myPets);
+    // console.log(cats.includes('santa')); //cats array includes santa or not ?? return true or false value
+    // console.dir(myPets.indexOf('pablo')); //find the index
+    // console.log(myPets.reverse()); //reverse the original array
+
+    // slice is a bit complicated, dont rush
+    let colors = ['yellow', 'blue', 'red', 'green', 'indigo', 'violet']
+    // console.log(colors.slice(3)); //cut first 3 and print the array
+    // console.log(colors.slice(2, 4)); //cuts the sliced part and print the sliced part only. Index number 2 and 3 are sliced (Example: slice(2, 5) means index 2 to 4 are displayed), but original array is not changed. HAHA
+    // console.log(colors)
+    // console.log(colors.splice(2, 4)) //4 things are going to cut starting from index 2(so index 2, 3,4, 5), but original array is also changed
+    // console.log(colors)
+
+    // console.log(colors.splice(1,0,'yellow-blue')); //add 'yellow-blue in index number 1 and no delete of anything(0 in the middle)'
+    // // console.log(colors.splice(3, 1, 'hello'));
+    // console.log(colors);
+    
+    // let name = ['a', 'b', 'i']
+    // namestr = name.toString() //convert array to string
+    // console.log(namestr);
+
+
+
+
+
+    // // reference types and equality testing
+    // // console.log(.99999999999999999999999999); //prints 
+    // // [1,2,3] === [1,2,3]; //false
+    // let num = [1, 2,3]
+    // let numCopy = num
+    // console.log(num.push(4))
+    // console.log(num);
+    // console.log(numCopy); //as both refer to same thing in the memory
+    // console.log(numCopy.pop())
+    // console.log(numCopy)
+    // console.log(num)
+
+    
+    
+
+    // array with const keyword
+    // const nums = [1,2,3]
+    // nums.push(4); //array memeory is there, we r just trying to change some values inside array, so this is possible
+    // console.log(nums);
+    // nums = [1, 2,3 ,4]; //can't be done, as array is const
+    
+    // A 2D array representing a simple game board
+    // const gameBoard = [
+    //   ['X', 'O', 'X'],
+    //   ['O', 'X', 'O'],
+    //   ['X', 'X', 'O']
+    // ];
+
+    // console.log(gameBoard);
+    
+    // // Accessing elements
+    // console.log(gameBoard[0][0]); // 'X' (first row, first column)
+    // console.log(gameBoard[1][2]); // 'O' (second row, third column)
+    // console.log(gameBoard[2][1]); // 'X' (third row, second column)
+ 
+
+
+
+
+// **************************************************************objects*********************************************************
+// object has key and value
+    // const person = {
+    //   name: "Rahul",
+    //   fullname: "Rahul Mishra",
+    //   age: 25,
+    //   city: "Mumbai",
+    // };
+    // // Accessing object data
+    // console.log(person['name']); //this is one method to see data,as key is also a string
+    // console.log(person['full'+'name'])
+    // console.log(person.name); // another method Output: Rahul (dot notation)
+    // console.log(person["age"]); // Output: 25 (bracket notation)
+
+    // const midterms = {
+    //     daneille: 96, 
+    //     thomas: 78
+    // }
+    // console.log(midterms)
+    // midterms.thomas = 79
+    // console.log(midterms)
+    // midterms.thomas = 'C+'
+    // console.log(midterms)
+    // midterms.daneille = 'A+'
+    // console.log(midterms)
+    // midterms.ezzra = 'B+'
+    // console.log(midterms)
+    // midterms.antony = 'A-'
+    // console.log(midterms)
+
+
+
+    // array + objects 
+    // array inside objects
+    // const comments = [
+    //     {username: 'Tammy', text: 'lollo', votes: 9}, 
+    //     {username: 'Fishboi', text: 'glub glub', votes: 12387}
+    // ]
+    // console.log(comments[0].text); //lollo
+    // //  array inside objects
+    // const classroom = {
+    //     teacher: "Mr. Sharma",
+    //     students: ["Aman", "Sara", "Vikram"]
+    // };
+    // console.log(classroom.students[0]); // Output: Aman
+    // // mixed stuff
+    // const school = {
+    //     name: "Green Valley High",
+    //     classes: [
+    //     {
+    //         grade: "10th",
+    //         students: ["Ravi", "Meena"]
+    //     },
+    //     {
+    //         grade: "12th",
+    //         students: ["Anil", "Priya"]
+    //     }
+    //     ]
+    // };
+    // console.log(school.classes[1].students[0]); // Output: Anil
+</script>
+</html>
