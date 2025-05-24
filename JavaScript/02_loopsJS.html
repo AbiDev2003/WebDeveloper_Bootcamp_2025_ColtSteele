@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Open console to experiment about loops</h1>
+</body>
+<script>
+    // repeating stuff with loops
+    // for loops
+    // const animals = ['lions', 'tigers', 'bears']
+    // for(let i = 0; i< animals.length; i++){
+    //   console.log(i, animals[i]);
+    // }
+    // // nested
+    // for(let i =1; i<=10; i++){
+    //   console.log(`i is ${i}`);
+    //   for(let j=1; j<4; j++){
+    //     console.log(`  j is: ${j}`);
+    //   }
+    // }
+
+    // A 2D array of student names (3 rows)
+// const students = [
+//   ["Alice", "Bob", "Charlie"],     // Row 1
+//   ["David", "Eve"],                // Row 2
+//   ["Frank", "Grace", "Heidi"]      // Row 3
+// ];
+// // Loop through each row
+// for (let i = 0; i < students.length; i++) {
+//   console.log(`# Row ${i + 1}`);
+//   // Loop through each name in the current row
+//   for (let j = 0; j < students[i].length; j++) {
+//     console.log(students[i][j]);
+//   }
+//   console.log(); // empty line between rows
+// }
+// // just a while loop example
+// let input = prompt("hey say something")
+// while(true){
+//   input = prompt(input);
+//   if(input.toLowerCase() === 'stop copying me'){
+//     break;
+//   }
+// }
+// console.log('ok u won');
+
+
+
+
+
+
+// number guessing game
+// let maximum = parseInt(prompt("Enter the maximum number")) //between which number to which number you can guess the number
+// while(!maximum){
+//   maximum = parseInt(prompt("Enter a valid number")) 
+// //   parseInt actually just consider the user input (as it is an integer), and ignores the rest things. So at the end we get an integer as input
+
+// }
+// const targetNum = Math.floor(Math.random() * maximum) + 1
+// let guess = prompt("Eter you first guess  (Type q to quit the game)")
+// let attempts = 1;
+// while(parseInt(guess) != targetNum){
+//     if(guess == 'q') break;
+//     guess = parseInt(guess)
+//     if(guess > targetNum){
+//         guess = prompt("Too high, Enter the number again")
+//         attempts ++;
+//     }else if(guess < targetNum){
+//         guess = prompt("Too low, enter again")
+//         attempts ++;
+//   }else{
+//     guess = prompt("Invalid guess. Please enter a number or 'q' to quit")
+//   }
+// }
+// if(guess === 'q')
+// {
+//     console.log("OK, You quit");
+// }else{
+//     console.log("you got it")
+//     console.log(`it took you ${attempts} guesses`)
+// }
+
+
+
+
+
+
+// for of loop 
+const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer']
+// for(let i = 0; i<subreddits.length; i++){
+//     console.log(`Visit reddit.com/r/${subreddits[i]}`);
+// }
+// we can write the above as for of
+// for (let sub of subreddits) {
+//     console.log(sub);
+//     console.log(`Visit reddit.com/r/${sub}`);
+// }
+
+// const seatingCharts = [
+//   ["Alice", "Bob", "Charlie"],     // Row 1
+//   ["David", "Eve"],                // Row 2
+//   ["Frank", "Grace", "Heidi"]      // Row 3
+// ];
+// for(let i =0; i<seatingCharts.length; i++){
+//     const row = seatingCharts[i]
+//     for(let j = 0; j< row.length; j++){
+//         console.log(row[j])
+//     }
+// }
+// we can write above using for of
+// for(const row of seatingCharts){
+//     // first iterate thrugh seatingCharts and the store individual elements in row
+//     // then iterate through row and store each individual elements in students
+//     // then print in output
+//     for(const student of row){
+//         console.log(student);
+//     }
+// }
+
+// for(let char of "hello pretty woman"){
+//     console.log(char);
+// }
+
+// for in examples (not widely used)
+const testScores = {
+    linon:80, 
+    damon: 65, 
+    kin: 66, 
+    damosam: 67, 
+    marlon: 68, 
+    abby: 69, 
+    diksha: 70, 
+    sanwat: 75, 
+    rabi: 69, 
+    abinash: 82, 
+}
+// for(let person in testScores){
+//     console.log(`${person} scored ${testScores[person]}`);
+// } //you can get keys and values
+
+for(let score of Object.values(testScores)){
+    console.log(score) //you can get score by this, but how to get both score as well as key . so follow along
+}
+// // we can print both name and score, just decalre like an array
+// for(let[name, score] of Object.entries(testScores)){
+//     console.log(`${name} scored ${score}`);
+// }
+
+let total = 0;
+let scores = Object.values(testScores) //returns only the values from an object but like an array format, from which we can calculate its length and aveaage score can be calculated
+for(let score of scores){
+    total = total + score;
+}
+// now we will calculate average and object dont have length property. So we use Object.values()
+console.log(total/scores.length);
+
+
+
+    
+    
+</script>
+</html>
