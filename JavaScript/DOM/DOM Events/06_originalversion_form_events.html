@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Events</h1>
+    <form action="/dogs" id="tweetForm">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="tweet" placeholder="tweet">
+        <button>post tweet</button>
+    </form>
+    <h2>Tweets</h2>
+    <ul id="tweets"></ul>
+</body>
+<script>
+    const tweetForm = document.querySelector('#tweetForm')
+    tweetForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const tweets = document.querySelector('#tweets')
+        // const usernameInput = document.querySelectorAll('input')[0]; //first input
+        // const tweetInput = document.querySelectorAll('input')[1]; //second input
+        // console.log(usernameInput.value, tweetInput.value)
+
+        // instead of taking input like above we can do like below.As in console.dir(tweetForm), we can see that in element there are inputs and button. So we can access using that
+        const usernameInput = tweetForm.elements.username;
+        const tweetInput = tweetForm.elements.tweet
+        addTweets(usernameInput.value, tweetInput.value)
+        usernameInput.value = " "
+        tweetInput.value = " "
+    })
+    const addTweets = (username, tweet) => {
+        const newTweet = document.createElement('li')
+        const bTag = document.createElement('b')
+        bTag.append(username)
+        newTweet.append(bTag); //first append user name in bold letters
+        newTweet.append(`- ${tweet}`) //then append tweet message to it. 
+        // console.log(newTweet);
+        tweets.append(newTweet); //then append both to the ul which has id "#tweets"
+        // console.log('submit')
+    }
+</script>
+</html>
