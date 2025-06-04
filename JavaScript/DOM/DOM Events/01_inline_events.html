@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <button onclick="alert('you clicked my button.'); alert('Stop clicking me')">click me</button>
+    <!-- writng js in html is not so good practice.  -->
+    <!-- <button>click me too</button>  -->
+    <!-- <button>click me too</button>  -->
+    <!-- <button>click me too</button>  -->
+    <!-- <button>click me too</button>  -->
+    <!-- we i want multile buttons and want the simlilar thing/JS/same behaviour in it, then we need a better approach-->
+    <button id="v2">Click me (second version)</button>
+    <button id="v3">Click me (third version)</button>
+    <button id="tas">Twist and shout</button>
+</body>
+<script>
+    // **********************************************onclick, onmouseover, onmouseclick etc...*************************************************
+    const btn = document.querySelector('#v2')
+    btn.onclick = function() {
+        console.log('you clicked me !');
+        console.log('It worked');
+    }
+    function scream() {
+        console.log('stop touching me please!');
+    }
+    function hover(){
+        alert('Stop hovering over me!');
+    }
+    btn.onmouseenter = scream; 
+    btn.onmouseover = hover; 
+    
+    document.querySelector('h1').onclick = () => {
+        alert('Why are you clicking the heading bro?😭')
+    }
+    
+    
+    // **********************************************addEventListener()*************************************************
+    const btn3 = document.querySelector('#v3')
+    btn3.addEventListener('click', function(){
+        alert('clicked third button!'); 
+    })
+
+
+    // why addEventListener is better than onclick or other such property. 
+    function twist(){
+        console.log('twist');
+    }
+    function shout(){
+        console.log('shout');
+    }
+    const tasButton = document.querySelector('#tas')
+    // tasButton.onclick = twist; //this will not work, cause onclick is just a property. So shout is overriding twist. So addEventListener is better. 
+    // tasButton.onclick = shout;
+
+    tasButton.addEventListener('click', twist, {once: true}) //once:true means it will only run once. 
+    tasButton.addEventListener('click', shout, {once: true})
+
+</script>
+</html>
