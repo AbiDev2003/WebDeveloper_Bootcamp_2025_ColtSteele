@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <style>
+        button {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+</style> -->
+
+<!-- to be used in event bubbling -->
+<style>
+        .hide {
+            display: none;
+        }
+</style>
+<body>
+    <!-- <h1>Events</h1>
+    <button onclick="alert('you clicked me !'); alert('stop clicking me !')">Click me 1</button>
+    <button ondblclick="alert('you double cliked me')">Click me 2</button> -->
+    <!-- onclick, ondoubleclick is an inline event i.e inside html -->
+
+
+    <!-- <button id="btn3">Click me 03</button>
+    <button id="btn4">Click me 04</button>
+    <button id="tas">twist and shout</button> -->
+
+
+
+
+
+
+    <!-- *********************events and this keyword********************** -->
+     <!-- apply style css that given commented in the style section -->
+    <!-- <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+    <button>CLICK</button>
+
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1>
+    <h1>Click Me!</h1> -->
+
+
+
+
+
+
+
+    <!-- ***************************************keyboard events and event objects******************************************* -->
+    <!-- <button>click</button>
+    <input type="text"> -->
+
+
+
+
+
+
+    <!--**********************************new version: form events and prevent default****************************** -->
+    <!-- <h1>My form</h1>
+    <form action="/shelter" id="shelterForm">
+        <input type="text" id="catName">
+        <button>Submit</button>
+    </form>
+    <h2>Available cats</h2>
+    <ul id="cats"></ul> -->
+
+
+
+
+
+
+    <!-- **************************************OLD and more advanced VERSION: form events and PreventDefault********************** -->
+     <!-- <h1>form events</h1>
+     <form action="/dogs" id="tweetForm">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="tweet" placeholder="tweet">
+        <button>post tweet</button>
+     </form>
+
+     <h2>Tweeets</h2>
+     <ul id="list"></ul> -->
+
+
+
+
+
+
+    <!-- *********************************************input and change events************************************** -->
+     <!-- <h1>Type below: </h1>
+     <input type="text"> -->
+
+
+
+
+
+
+    
+    <!-- ************************************************Event bubbling ************************************************** -->
+    <!-- <section onclick="alert('section clicked')">
+        <p onclick="alert('paragraph clicked')">
+            I am a paragraph:
+            <button onclick="alert('button clicked')">Click</button>
+        </p>
+    </section>
+
+    <div id="container">
+        Click To Hide
+        <button id="changeColor">Change Color</button>
+    </div> -->
+
+
+
+
+
+
+    <!-- ***********************************************Event delegation()***************************************** -->
+    <h1>Event Delegation</h1>
+
+   <form action="/dogs" id="tweetForm">
+        <input type="text" name="username" placeholder="username">
+        <input type="text" name="tweet" placeholder="tweet">
+        <button>Post Tweet</button>
+    </form>
+
+    <h2>Tweets:</h2>
+    <ul id="tweets">
+        <li>I AM LI!!!</li>
+        <li>I AM LI!!!</li>
+        <p>aslkdjaslkdjaksl</p>
+    </ul>
+
+</body>
+<script src="DOM_events_complete.js"></script>
+</html>
