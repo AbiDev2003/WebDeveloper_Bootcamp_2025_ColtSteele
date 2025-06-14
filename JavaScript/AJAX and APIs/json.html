@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning json</h1>
+</body>
+<script>
+    // parsing the string text as JSON
+    const data = '{"name":"John", "age":30, "city":"New York"}';
+    const parsedData = JSON.parse(data)
+    console.log(parsedData);
+    console.log(parsedData.name)
+
+    // convert js objects/array to json
+    const dog = {
+        breed: 'lab', 
+        color: 'black', 
+        isAlive: 'true', 
+        owner: undefined
+    }
+    const toJSON = JSON.stringify(dog)
+    console.log(toJSON);
+</script>
+</html>
